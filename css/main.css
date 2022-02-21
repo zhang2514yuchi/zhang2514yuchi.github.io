@@ -189,8 +189,8 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: Nunito, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1em;
+  font-family: "Arial", "Microsoft YaHei", "标楷体", sans-serif;
+  font-size: 12px;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -202,7 +202,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Brinnan, Nunito, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Georgia, "标楷体", sans;
   font-weight: bold;
   line-height: 1.5;
   margin: 30px 0 15px;
@@ -439,7 +439,7 @@ pre figcaption a:hover {
 }
 pre,
 code {
-  font-family: Input Mono, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+  font-family: "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
 }
 code {
   border-radius: 3px;

@@ -30,10 +30,10 @@
 <meta property="og:image" content="http://zhang2514yuchi.github.io/Users/zhangyuchi/Juuichi/blog/myblog/themes/next/source/images/1.png">
 <meta property="og:image" content="http://zhang2514yuchi.github.io/Users/zhangyuchi/Juuichi/blog/myblog/themes/next/source/images/2.png">
 <meta property="article:published_time" content="2022-02-21T04:53:00.000Z">
-<meta property="article:modified_time" content="2022-02-21T05:21:18.209Z">
+<meta property="article:modified_time" content="2022-02-21T05:24:52.173Z">
 <meta property="article:author" content="Juuichi">
-<meta property="article:tag" content="线段树">
 <meta property="article:tag" content="树状数组">
+<meta property="article:tag" content="线段树">
 <meta property="article:tag" content="主席树">
 <meta name="twitter:card" content="&lt;twitter:card&gt;">
 <meta name="twitter:image" content="http://zhang2514yuchi.github.io/2022/02/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%3Ctwitter:image%3E">
@@ -227,7 +227,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-02-21 12:53:00 / 修改时间：13:21:18" itemprop="dateCreated datePublished" datetime="2022-02-21T12:53:00+08:00">2022-02-21</time>
+      <time title="创建时间：2022-02-21 12:53:00 / 修改时间：13:24:52" itemprop="dateCreated datePublished" datetime="2022-02-21T12:53:00+08:00">2022-02-21</time>
     </span>
 
   
@@ -256,7 +256,8 @@
 
 
 
-<h4 id="3-差分实现区间改-x2F-区间查"><a href="#3-差分实现区间改-x2F-区间查" class="headerlink" title="3.差分实现区间改&#x2F;区间查"></a>3.差分实现区间改&#x2F;区间查</h4><p>$$<br>sum[i]&#x3D;\sum_{j&#x3D;1}^i c[j] \times(i-j+1)<br>\<br>sum[i]&#x3D;(i+1) \times \sum_{j&#x3D;1}^i c[j] -\sum_{j&#x3D;1}^i c[j] \times j<br>$$</p>
+<h4 id="3-差分实现区间改-x2F-区间查"><a href="#3-差分实现区间改-x2F-区间查" class="headerlink" title="3.差分实现区间改&#x2F;区间查"></a>3.差分实现区间改&#x2F;区间查</h4><p>$$<br>sum[i]&#x3D;\sum_{j&#x3D;1}^i c[j] \times(i-j+1)<br>$$</p>
+<p>$$<br>sum[i]&#x3D;(i+1) \times \sum_{j&#x3D;1}^i c[j] -\sum_{j&#x3D;1}^i c[j] \times j<br>$$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> d1[Max],d2[Max],a[Max],b[Max];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">lowbit</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;<span class="keyword">return</span> x&amp;-x;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> *c,<span class="type">int</span> p,<span class="type">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(p&lt;=n)&#123;c[p]+=k;p+=<span class="built_in">lowbit</span>(p);&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> *c,<span class="type">int</span> p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(p)&#123;ans+=c[p];p-=<span class="built_in">lowbit</span>(p);&#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">f</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b[x]+(x+<span class="number">1</span>)*<span class="built_in">sum</span>(d1,x)-<span class="built_in">sum</span>(d2,x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">pos</span>(i,<span class="number">1</span>,n) </span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a[i];</span><br><span class="line">        b[i]=b[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">pos</span>(i,<span class="number">1</span>,m)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x,l,r,k;</span><br><span class="line">        cin&gt;&gt;x&gt;&gt;l&gt;&gt;r;</span><br><span class="line">        <span class="keyword">if</span>(x==<span class="number">1</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;k;</span><br><span class="line">            <span class="built_in">add</span>(d1,l,k),<span class="built_in">add</span>(d1,r+<span class="number">1</span>,-k),<span class="built_in">add</span>(d2,l,k*l),<span class="built_in">add</span>(d2,r+<span class="number">1</span>,-k*(r+<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> cout&lt;&lt;<span class="built_in">f</span>(r)-<span class="built_in">f</span>(l<span class="number">-1</span>)&lt;&lt;endl; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -327,8 +328,8 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag"># 线段树</a>
               <a href="/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/" rel="tag"># 树状数组</a>
+              <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="tag"># 线段树</a>
               <a href="/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/" rel="tag"># 主席树</a>
           </div>
 
@@ -341,8 +342,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/02/21/P1494/" rel="next" title="小z的袜子[国家集训队]">
-                  小z的袜子[国家集训队] <i class="fa fa-chevron-right"></i>
+                <a href="/2022/02/21/P4513/" rel="next" title="P4513 小白逛公园">
+                  P4513 小白逛公园 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

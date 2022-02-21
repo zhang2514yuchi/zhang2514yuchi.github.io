@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Brinnan:300,300italic,400,400italic,700,700italic%7CNunito:300,300italic,400,400italic,700,700italic%7CCrete+Round:300,300italic,400,400italic,700,700italic%7CAlegreya:300,300italic,400,400italic,700,700italic%7CInput+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Brinnan:300,300italic,400,400italic,700,700italic%7CHanWangKaiMedium:300,300italic,400,400italic,700,700italic%7CInput+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
@@ -139,13 +139,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -193,7 +193,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhang2514yuchi.github.io/2022/02/21/P4513/">
+    <link itemprop="mainEntityOfPage" href="http://zhang2514yuchi.github.io/2022/02/21/%E6%95%B0%E8%AE%BA%E5%88%86%E5%9D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -206,7 +206,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/21/P4513/" class="post-title-link" itemprop="url">P4513 小白逛公园</a>
+          <a href="/2022/02/21/%E6%95%B0%E8%AE%BA%E5%88%86%E5%9D%97/" class="post-title-link" itemprop="url">数论分块</a>
         </h2>
 
         <div class="post-meta-container">
@@ -218,7 +218,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-02-21 12:56:22 / 修改时间：13:27:53" itemprop="dateCreated datePublished" datetime="2022-02-21T12:56:22+08:00">2022-02-21</time>
+      <time title="创建时间：2022-02-21 15:13:38 / 修改时间：15:15:17" itemprop="dateCreated datePublished" datetime="2022-02-21T15:13:38+08:00">2022-02-21</time>
     </span>
 
   
@@ -231,10 +231,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>题意：<br>序列，单点修改，询问区间最大子段和<br>最大子段和指的是找出一个可以是空的子区间，和最大</p>
+          <h1 id="数论分块"><a href="#数论分块" class="headerlink" title="数论分块"></a>数论分块</h1><p>对于一类含有$\lfloor \frac{𝑛}{i} \rfloor$的求和式 (𝑛 为常数)，由于$\lfloor \frac{𝑛}{i} \rfloor$单调不增，故存在多个区间[𝑙,𝑟], 使得$\lfloor \frac{𝑛}{i} \rfloor$&#x3D;$\lfloor \frac{𝑛}{j} \rfloor$  (𝑖,𝑗∈[𝑙,𝑟]) 成立。</p>
+<p>对于任意一个𝑖，最大的满足上式的 𝑗&#x3D;$\lfloor {\frac{n}{\lfloor \frac{𝑛}{i} \rfloor} }\rfloor$</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/02/21/P4513/#more" rel="contents">
+              <a class="btn" href="/2022/02/21/%E6%95%B0%E8%AE%BA%E5%88%86%E5%9D%97/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -338,6 +339,78 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://zhang2514yuchi.github.io/2022/02/21/P4513/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Juuichi">
+      <meta itemprop="description" content="记录计算机相关知识,算法刷题笔记等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Juuichi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/21/P4513/" class="post-title-link" itemprop="url">P4513 小白逛公园</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-21 12:56:22 / 修改时间：13:27:53" itemprop="dateCreated datePublished" datetime="2022-02-21T12:56:22+08:00">2022-02-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>题意：<br>序列，单点修改，询问区间最大子段和<br>最大子段和指的是找出一个可以是空的子区间，和最大</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/21/P4513/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://zhang2514yuchi.github.io/2022/02/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -363,7 +436,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2022-02-21 12:53:00 / 修改时间：13:30:19" itemprop="dateCreated datePublished" datetime="2022-02-21T12:53:00+08:00">2022-02-21</time>
+      <time title="创建时间：2022-02-21 12:53:00 / 修改时间：15:17:53" itemprop="dateCreated datePublished" datetime="2022-02-21T12:53:00+08:00">2022-02-21</time>
     </span>
 
   

@@ -189,8 +189,8 @@ body {
   background: var(--body-bg-color);
   box-sizing: border-box;
   color: var(--text-color);
-  font-family: "Arial", "Microsoft YaHei", "标楷体", sans-serif;
-  font-size: 12px;
+  font-family: "Arial", "标楷体", sans-serif;
+  font-size: 14px;
   line-height: 2;
   min-height: 100%;
   position: relative;

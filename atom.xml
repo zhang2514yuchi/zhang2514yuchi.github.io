@@ -6,7 +6,7 @@
   <link href="http://zhang2514yuchi.github.io/atom.xml" rel="self"/>
   
   <link href="http://zhang2514yuchi.github.io/"/>
-  <updated>2022-03-13T13:18:43.114Z</updated>
+  <updated>2022-03-13T13:29:11.230Z</updated>
   <id>http://zhang2514yuchi.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【线代复习】3-矩阵的基本概念与运算</title>
+    <title>线代复习-3-矩阵的基本概念与运算</title>
     <link href="http://zhang2514yuchi.github.io/2022/03/13/%E7%BA%BF%E4%BB%A33/"/>
     <id>http://zhang2514yuchi.github.io/2022/03/13/%E7%BA%BF%E4%BB%A33/</id>
     <published>2022-03-13T12:54:31.000Z</published>
-    <updated>2022-03-13T13:18:43.114Z</updated>
+    <updated>2022-03-13T13:29:11.230Z</updated>
     
     <content type="html"><![CDATA[<p>矩阵的基本概念与运算</p><span id="more"></span><p>1.$AB&#x3D;BC,A\ne0 \Rightarrow A(B-C)&#x3D;0$</p><p>​                                $ \nRightarrow B&#x3D;C$</p><p>2.方阵乘积的行列式</p><p>​    设$A,B$是同阶方阵，则$|AB|&#x3D;|A||B|.$</p><p>3.逆矩阵的性质</p><p>​    设$A,B$是同阶可逆矩阵，则</p><p>​    (1) $AB$也可逆，且$(AB)^{-1}&#x3D;B^{-1}A^{-1}$</p><p>​    (2)$A^T$也可逆，且$(A^T)^{-1}&#x3D;(A^{-1})^T$</p><p>4.分块矩阵的逆，若$A,B$均是可逆方针，则：</p><p>$\begin{bmatrix}A&amp;O\O&amp;B\end{bmatrix}^{-1}&#x3D;\begin{bmatrix}A^{-1}&amp;O\O&amp;B^{-1} \end{bmatrix},\begin{bmatrix}O&amp;A\B&amp;O\end{bmatrix}^{-1} &#x3D;\begin{bmatrix}O&amp;B^{-1} \A^{-1} &amp;O\end{bmatrix}$</p><p>5.求方阵的幂</p><p>(1)通过直接或者拆成–&gt;列$\times$行 ，来凑前后两项为常数或单位矩阵</p><p>(2)算出前几次幂（2或3）可能会出现周期或者常数</p><p>(3)拆成$A+E$的形式，然后根据二项式定理展开</p><p>6.*[错题本]</p><p>$A,B$是n阶方阵，满足$AB&#x3D;A-B$，证明：$AB&#x3D;BA.$</p><p>7.*[错题本]</p><p>证明充分必要条件时，分两步：充分性和必要性</p>]]></content>
     

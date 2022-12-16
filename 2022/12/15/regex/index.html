@@ -20,17 +20,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhang2514yuchi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="什么是正则表达式？ 正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。  一个正则表达式是一种从左到右匹配主体字符串的模式。“Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。 想象你正在写一个应用，然后你">
+  <meta name="description" content="什么是正则表达式？ 正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。  一个正则表达式是一种从左到右匹配主体字符串的模式。“Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="正则表达式">
 <meta property="og:url" content="http://zhang2514yuchi.github.io/2022/12/15/regex/index.html">
 <meta property="og:site_name" content="Juuichi">
-<meta property="og:description" content="什么是正则表达式？ 正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。  一个正则表达式是一种从左到右匹配主体字符串的模式。“Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。 想象你正在写一个应用，然后你">
+<meta property="og:description" content="什么是正则表达式？ 正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。  一个正则表达式是一种从左到右匹配主体字符串的模式。“Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zhang2514yuchi.github.io/2022/12/15/regex/1.png">
 <meta property="og:image" content="https://img.shields.io/twitter/url/https/twitter.com/ziishaned.svg?style=social&label=Follow%20@ziishaned">
 <meta property="article:published_time" content="2022-12-15T11:26:32.000Z">
-<meta property="article:modified_time" content="2022-12-16T13:36:30.879Z">
+<meta property="article:modified_time" content="2022-12-16T13:38:51.688Z">
 <meta property="article:author" content="Juuichi">
 <meta name="twitter:card" content="&lt;twitter:card&gt;">
 <meta name="twitter:image" content="http://zhang2514yuchi.github.io/2022/12/15/regex/%3Ctwitter:image%3E">
@@ -230,7 +230,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-16 21:36:30" itemprop="dateModified" datetime="2022-12-16T21:36:30+08:00">2022-12-16</time>
+      <time title="修改时间：2022-12-16 21:38:51" itemprop="dateModified" datetime="2022-12-16T21:38:51+08:00">2022-12-16</time>
     </span>
 
   
@@ -247,6 +247,8 @@
 <p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。</p>
 </blockquote>
 <p>一个正则表达式是一种从左到右匹配主体字符串的模式。<br>“Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。<br>正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。</p>
+<span id="more"></span>
+
 <p>想象你正在写一个应用，然后你想设定一个用户命名的规则，让用户名包含字符、数字、下划线和连字符，以及限制字符的个数，好让名字看起来没那么丑。<br>我们使用以下正则表达式来验证一个用户名：</p>
 <p><img src="/2022/12/15/regex/1.png"></p>
 <p>以上的正则表达式可以接受 <code>john_doe</code>、<code>jo-hn_doe</code>、<code>john12_as</code>。<br>但不匹配<code>Jo</code>，因为它包含了大写的字母而且太短了。</p>
@@ -637,7 +639,7 @@
 <li>报告问题</li>
 <li>开放合并请求</li>
 <li>传播此文档</li>
-<li>直接和我联系 <a href="mailto:&#x7a;&#105;&#105;&#x73;&#104;&#x61;&#110;&#x65;&#100;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x7a;&#105;&#105;&#x73;&#104;&#x61;&#110;&#x65;&#100;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a> 或 <a target="_blank" rel="noopener" href="https://twitter.com/ziishaned"><img src="https://img.shields.io/twitter/url/https/twitter.com/ziishaned.svg?style=social&label=Follow%20@ziishaned" alt="Twitter URL"></a></li>
+<li>直接和我联系 <a href="mailto:&#122;&#x69;&#x69;&#115;&#x68;&#97;&#x6e;&#x65;&#x64;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#122;&#x69;&#x69;&#115;&#x68;&#97;&#x6e;&#x65;&#x64;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;</a> 或 <a target="_blank" rel="noopener" href="https://twitter.com/ziishaned"><img src="https://img.shields.io/twitter/url/https/twitter.com/ziishaned.svg?style=social&label=Follow%20@ziishaned" alt="Twitter URL"></a></li>
 </ul>
 <h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p>MIT &amp;copy; <a target="_blank" rel="noopener" href="https://twitter.com/ziishaned">Zeeshan Ahmad</a></p>
 
